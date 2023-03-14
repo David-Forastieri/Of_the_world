@@ -106,4 +106,5 @@ dist
 # package-lock.json
 package-lock.json
 
-.build
+# build page
+build/
