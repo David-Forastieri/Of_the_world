@@ -47,7 +47,7 @@ const Form = () => {
     } else {
       const value = { data, ct: countryId }
 
-      fetch('http://localhost:3001/activities', {
+      fetch('https://oftheworldback-production.up.railway.app/activities', {
         method: 'POST',
         body: JSON.stringify(value),
         headers: {

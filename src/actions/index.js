@@ -1,7 +1,9 @@
 
+const URL = "https://oftheworldback-production.up.railway.app"
+
 export const getCountries = () => {
   return async function (dispatch) {
-    const resp = await fetch("http://localhost:3001/")
+    const resp = await fetch(`${URL}`)
     const data = await resp.json()
     return dispatch({ type: "GET-COUNTRIES", payload: data })
   }
@@ -11,7 +13,7 @@ export const getCountries = () => {
 export const getCountry = (param) => {
   if (param) {
     return async function (dispatch) {
-      const resp = await fetch(`http://localhost:3001/countries/${param}`)
+      const resp = await fetch(`${URL}/countries/${param}`)
       const data = await resp.json()
       return dispatch({ type: "GET-COUNTRY", payload: data })
     }
